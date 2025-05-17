@@ -73,4 +73,54 @@ void exibirTabuleiro(int tabuleiro[TAMANHO][TAMANHO]) {
         printf("%d ", j); // Imprime os números das colunas (0 a 9).
     }
     printf("\n");
-    return 0;
+
+    // Percorrer cada linha do tabuleiro para imprimir.
+    for (int i = 0; i < TAMANHO; i++) {
+        printf("%d ", i); // Imprime o número da linha.
+        // Dentro de cada linha, percorremos cada coluna.
+        for (int j = 0; j < TAMANHO; j++) {
+            printf("%d ", tabuleiro[i][j]); // Imprime o valor da célula (0 ou 3).
+        }
+        printf("\n"); // Depois de imprimir toda a linha, vamos para a próxima linha.
+    }
+    printf("\n"); // Linha extra no final para melhor visualização.
+}
+
+int main() {
+    // Declara o nosso tabuleiro 10x10.
+    int tabuleiro[TAMANHO][TAMANHO];
+
+    // Inicializa o tabuleiro com água (todas as células com valor 0).
+    inicializarTabuleiro(tabuleiro);
+    printf("Tabuleiro inicializado:\n");
+    exibirTabuleiro(tabuleiro);
+
+    printf("Posicionando os navios...\n");
+
+    // Posicionar quatro navios, como pedido: dois horizontais/verticais e dois diagonais.
+    // A direção 0 é horizontal, 1 é vertical, 2 é diagonal crescente, 3 é diagonal decrescente.
+    int tamanhoNavio = 3; // O tamanho de todos os navios é 3.
+
+    // Posicionando o primeiro navio horizontalmente. Escolhemos a linha 2 e a coluna 1.
+    posicionarNavio(tabuleiro, 2, 1, tamanhoNavio, 0);
+    printf("Navio horizontal posicionado.\n");
+
+    // Posicionando o segundo navio verticalmente. Escolhemos a linha 5 e a coluna 3.
+    posicionarNavio(tabuleiro, 5, 3, tamanhoNavio, 1);
+    printf("Navio vertical posicionado.\n");
+
+    // Posicionando o terceiro navio diagonalmente (linha e coluna aumentando). Começamos na linha 0 e coluna 0.
+    posicionarNavio(tabuleiro, 0, 0, tamanhoNavio, 2);
+    printf("Navio diagonal crescente posicionado.\n");
+
+    // Posicionando o quarto navio diagonalmente (linha aumentando e coluna diminuindo). Começamos na linha 0 e coluna 9.
+    posicionarNavio(tabuleiro, 0, 9, tamanhoNavio, 3);
+    printf("Navio diagonal decrescente posicionado.\n");
+
+    printf("\nTabuleiro com os navios posicionados:\n");
+    exibirTabuleiro(tabuleiro);
+
+    return 0; // Programa terminou corretamente.
+}
+
+    
