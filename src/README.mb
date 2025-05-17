@@ -4,7 +4,7 @@ Primeiro passo do jogo Batalha Naval em C: posiciona dois navios (horizontal e v
 
 ## Sobre
 
-Adicionar posicionamento diagonal de navios (2 de 4), validar limites e sobreposição, exibir tabuleiro 10x10.
+Programa em C que simula um jogo de Batalha Naval com a adição de habilidades especiais (Cone, Cruz, Octaedro) que possuem áreas de efeito distintas visualizadas no tabuleiro.
 ## Como executar
 
 1.  Salve `batalha_naval.c` em `src/`.
