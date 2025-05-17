@@ -1,0 +1,16 @@
+# Batalha Naval Novato
+
+Primeiro passo do jogo Batalha Naval em C: posiciona dois navios (horizontal e vertical) em um tabuleiro 10x10.
+
+## Sobre
+
+Este projeto inicializa um tabuleiro de Batalha Naval e posiciona um navio horizontal e um vertical, representando-os com o número `3`. O restante do tabuleiro é preenchido com `0` (água). É um exercício básico para aprender sobre arrays em C e a representação de um jogo simples.
+
+## Como executar
+
+1.  Salve `batalha_naval.c` em `src/`.
+2.  Navegue para `src/` no terminal.
+3.  Compile: `gcc batalha_naval.c -o batalha_naval.exe`
+4.  Execute: `.\batalha_naval.exe`
+
+O tabuleiro com os navios será exibido.
